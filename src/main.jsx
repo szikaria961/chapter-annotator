@@ -1,5 +1,6 @@
 import React, { useState } from 'https://cdn.skypack.dev/react';
 import ReactDOM from 'https://cdn.skypack.dev/react-dom';
+import ChapterInputs from './components/chapter-inputs'
 
 const App = () => {
   const [bookName, setBookName] = useState("");
@@ -47,41 +48,20 @@ const App = () => {
 
   return (
     <div>
-      <input
-        onChange={handleChangeBookName}
-        value={bookName}
-        type='text'
+      <ChapterInputs
+        authorName={authorName}
+        bookName={bookName}
+        chapterName={chapterName}
+        handleChangeAuthorName={handleChangeAuthorName}
+        handleChangeBookName={handleChangeBookName}
+        handleChangeChapterName={handleChangeChapterName}
+        handleChangeKeyIdeas={handleChangeKeyIdeas}
+        handleChangeMainTakeaway={handleChangeMainTakeaway}
+        handleChangeQuestions={handleChangeQuestions}
+        keyIdeas={keyIdeas}
+        mainTakeaway={mainTakeaway}
+        questions={questions}
       />
-      <br/>
-      <input
-        onChange={handleChangeChapterName}
-        value={chapterName}
-        type='text'
-      />
-      <br />
-      <input
-        onChange={handleChangeAuthorName}
-        value={authorName}
-        type='text'
-      />
-      <br />
-      <textarea
-        onChange={handleChangeKeyIdeas}
-        value={keyIdeas}
-      >
-      </textarea>
-      <br />
-      <textarea
-        onChange={handleChangeMainTakeaway}
-        value={mainTakeaway}
-      >
-      </textarea>
-      <br />
-      <textarea
-        onChange={handleChangeQuestions}
-        value={questions}
-      >
-      </textarea>
       <div>
         Title: {bookName} <br />
         Chapter Name: {chapterName} <br />
@@ -92,7 +72,6 @@ const App = () => {
           {mainTakeaway} <br />
         Questions: <br />
           {questions} <br />
-
       </div>
     </div>
   );

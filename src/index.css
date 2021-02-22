@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #05c46b;
+}
+
+input {
+  padding: 5px;
+  border-radius: 1em;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  color: #1e272e;
+  width: 40%;
+  height: 20px;
+  outline: none;
+  border-width: 1px;
+
+}
+
+.header-title, {
+  padding: 20px 0 10px 0;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.chapter-outputs > .book-name {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.chapter-outputs > .author-name {
+  font-size: .75em;
+  text-align: center;
+  font-style: italic;
+}
+
+.chapter-outputs > .chapter-name {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.chapter-outputs > .key-ideas {
+
+}
+
+.chapter-outputs > .main-takeaway {
+
+}
+
+
+.chapter-outputs {
+  width: 100%;
+  border-radius: 1em;
+  font-size: 1em;
+  background-color:#0be881;
+  color: #1e272e;
+}
+
+
+.app {
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+}
+
+.app-content {
+  width: 60%;
+}

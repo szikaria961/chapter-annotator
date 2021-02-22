@@ -1,6 +1,7 @@
 import React, { useState } from 'https://cdn.skypack.dev/react';
 import ReactDOM from 'https://cdn.skypack.dev/react-dom';
-import ChapterInputs from './components/chapter-inputs'
+import ChapterInputs from './components/chapter-inputs';
+import './index.css';
 
 const App = () => {
   const [bookName, setBookName] = useState("");
@@ -47,31 +48,33 @@ const App = () => {
   }
 
   return (
-    <div>
-      <ChapterInputs
-        authorName={authorName}
-        bookName={bookName}
-        chapterName={chapterName}
-        handleChangeAuthorName={handleChangeAuthorName}
-        handleChangeBookName={handleChangeBookName}
-        handleChangeChapterName={handleChangeChapterName}
-        handleChangeKeyIdeas={handleChangeKeyIdeas}
-        handleChangeMainTakeaway={handleChangeMainTakeaway}
-        handleChangeQuestions={handleChangeQuestions}
-        keyIdeas={keyIdeas}
-        mainTakeaway={mainTakeaway}
-        questions={questions}
-      />
-      <div>
-        Title: {bookName} <br />
-        Chapter Name: {chapterName} <br />
-        Author's Name: {authorName} <br />
-        What are the key ideas? <br />
-          {keyIdeas} <br />
-        Main Takeaways: <br />
-          {mainTakeaway} <br />
-        Questions: <br />
-          {questions} <br />
+    <div className="app">
+      <div className="app-container">
+        <div className="app-content">
+          <h1 className="header-title">Chapter Annotator</h1>
+          <ChapterInputs
+            authorName={authorName}
+            bookName={bookName}
+            chapterName={chapterName}
+            handleChangeAuthorName={handleChangeAuthorName}
+            handleChangeBookName={handleChangeBookName}
+            handleChangeChapterName={handleChangeChapterName}
+            handleChangeKeyIdeas={handleChangeKeyIdeas}
+            handleChangeMainTakeaway={handleChangeMainTakeaway}
+            handleChangeQuestions={handleChangeQuestions}
+            keyIdeas={keyIdeas}
+            mainTakeaway={mainTakeaway}
+            questions={questions}
+          />
+          <div className="chapter-outputs">
+            <div className="book-name">{bookName}</div>
+            <div className="author-name">{authorName}</div>
+            <div className="chapter-name">{chapterName}</div>
+            <div className="key-ideas">{keyIdeas}</div>
+            <div className="main-takeaway">{mainTakeaway}</div>
+            <div className="questions">{questions}</div>
+          </div>
+        </div>
       </div>
     </div>
   );

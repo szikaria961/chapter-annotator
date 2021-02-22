@@ -1,0 +1,42 @@
+.book-name-title-label, .chapter-name-label, .author-name-label, .key-ideas-label, .main-takeaway-label, .questions-label {
+  font-size: 0.85em;
+}
+
+
+text-area {
+  padding: 5px;
+  border-radius: 1em;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  color: #1e272e;
+  width: 40%;
+  height: 20px;
+  outline: none;
+}
+
+.key-ideas {
+  padding: 5px;
+  border-radius: 1em;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  color: #1e272e;
+  width: 40%;
+  height: 20px;
+  outline: none;
+  min-width: 100%;
+  height: 20vh;
+}
+
+.main-takeaway, .questions {
+  outline: 1px solid #1e272e;
+  padding: 5px;
+  border-radius: 1em;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1em;
+  color: #1e272e;
+  width: 40%;
+  height: 20px;
+  outline: none;
+  min-width: 100%;
+  height: 14vh;
+}

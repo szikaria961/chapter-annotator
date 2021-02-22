@@ -17,54 +17,51 @@ const ChapterInputs = ({
 }) => {
   return (
     <div className="chapter-inputs">
-      <div className="book-name-title-label">Title</div>
+      <div className="book-name-title-label label">Title</div>
       <input
         className="book-name-title"
         onChange={handleChangeBookName}
         type="text"
         value={bookName}
       />
-      <br />
-      <div className="author-name-label">Authors Name</div>
+      <div className="author-name-label label">Authors Name</div>
       <input
         className="author-name"
         onChange={handleChangeAuthorName}
         value={authorName}
         type="text"
       />
-      <br />
-      <div className="chapter-name-label">Chapter Name</div>
+      <div className="chapter-name-label label">Chapter Name</div>
       <input
         className="chapter-name"
         onChange={handleChangeChapterName}
         value={chapterName}
         type="text"
       />
-      <br />
-      <div className="key-ideas-label">What are key the ideas?</div>
+      <div className="key-ideas-label label">What are key the ideas?</div>
       <textarea
         className="key-ideas"
         onChange={handleChangeKeyIdeas}
         value={keyIdeas}
+        rows="5"
       >
       </textarea>
-      <br />
-      <div className="main-takeaway-label">What is the main takeaway?</div>
+      <div className="main-takeaway-label label">What is the main takeaway?</div>
       <textarea
         className="main-takeaway"
         onChange={handleChangeMainTakeaway}
         value={mainTakeaway}
+        rows="5"
       >
       </textarea>
-      <br />
-      <div className="questions-label">Questions?</div>
+      <div className="questions-label label">Questions?</div>
       <textarea
         className="questions"
         onChange={handleChangeQuestions}
         value={questions}
+        rows="5"
       >
       </textarea>
-      <br />
     </div>
   );
 }

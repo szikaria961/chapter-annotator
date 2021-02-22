@@ -10,7 +10,6 @@ body {
 input {
   padding: 5px;
   border-radius: 1em;
-  font-family: 'Nunito', sans-serif;
   font-size: 1em;
   color: #1e272e;
   width: 40%;
@@ -18,6 +17,17 @@ input {
   outline: none;
   border-width: 1px;
 
+}
+
+text-area {
+  padding: 5px;
+  border-radius: 1em;
+  font-size: 1em;
+  color: #1e272e;
+  width: 40%;
+  height: 80px;
+  outline: none;
+  word-wrap: break-word;
 }
 
 .header-title, {
@@ -44,20 +54,25 @@ input {
 }
 
 .chapter-outputs > .key-ideas {
-
+  font-size: 1em;
 }
 
 .chapter-outputs > .main-takeaway {
-
+  font-size: 1em;
 }
 
+.chapter-outputs > .questions {
+  font-size: 1em;
+}
 
 .chapter-outputs {
-  width: 100%;
+  padding: 5px;
+  min-width: 100%;
   border-radius: 1em;
   font-size: 1em;
   background-color:#0be881;
   color: #1e272e;
+  word-wrap: break-word;
 }
 
 

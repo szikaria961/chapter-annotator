@@ -2,6 +2,8 @@ import React, { useState } from 'https://cdn.skypack.dev/react';
 import ReactDOM from 'https://cdn.skypack.dev/react-dom';
 import ChapterInputs from './components/chapter-inputs';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './index.css';
 
 const App = () => {
@@ -72,6 +74,13 @@ const App = () => {
             questions={questions}
           />
           <div className="chapter-outputs">
+            <CopyToClipboard
+              text={getChapterOutputs()}
+            >
+              <div className="copy-icon">
+                <FontAwesomeIcon icon={faCopy} />
+              </div>
+            </CopyToClipboard>
             <div className="book-name">{bookName}</div>
             <div className="author-name">{authorName}</div>
             <div className="chapter-name">{chapterName}</div>
@@ -79,11 +88,6 @@ const App = () => {
             <div className="main-takeaway">{mainTakeaway}</div>
             <div className="questions">{questions}</div>
           </div>
-          <CopyToClipboard
-            text={getChapterOutputs()}
-          >
-            <button>Copy</button>
-          </CopyToClipboard>
         </div>
       </div>
     </div>

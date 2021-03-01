@@ -1,6 +1,7 @@
 import React, { useState } from 'https://cdn.skypack.dev/react';
 import ReactDOM from 'https://cdn.skypack.dev/react-dom';
 import ChapterInputs from './components/chapter-inputs';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import './index.css';
 
 const App = () => {
@@ -47,6 +48,10 @@ const App = () => {
     setQuestions(value);
   }
 
+  const getChapterOutputs = () => {
+    return `${bookName}\n${authorName}\n${chapterName}\n${keyIdeas}\n${mainTakeaway}\n${questions}\n`
+  }
+
   return (
     <div className="app">
       <div className="app-container">
@@ -74,6 +79,11 @@ const App = () => {
             <div className="main-takeaway">{mainTakeaway}</div>
             <div className="questions">{questions}</div>
           </div>
+          <CopyToClipboard
+            text={getChapterOutputs()}
+          >
+            <button>Copy</button>
+          </CopyToClipboard>
         </div>
       </div>
     </div>

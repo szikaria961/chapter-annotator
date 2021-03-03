@@ -4,7 +4,7 @@ Chapter Annotator
 
 ## Description
 
-TODO
+Front-end for generating chapter summary for a book of your choice.
 
 ## Development
 
@@ -22,7 +22,7 @@ Create a new terminal tab/session and do the following:
 
 ```
 cd chapter-annotator
-npx snowpack dev
+npm run dev
 ```
 
 View development app at `http://localhost:8000`
